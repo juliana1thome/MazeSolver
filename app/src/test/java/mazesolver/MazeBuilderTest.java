@@ -16,7 +16,7 @@ public class MazeBuilderTest {
             { 1, 1, 1, 0 }
         };
 
-        Maze maze = MazeBuilder.createFromFile("small-maze.txt");
+        Maze maze = MazeBuilder.createFromFile("src/test/resources/small-maze.txt");
 
         assertEquals(Arrays.deepEquals(expectedMatrix, maze.getMatrix()), true);
     }
@@ -27,7 +27,7 @@ public class MazeBuilderTest {
         int exitX = 3;
         int exitY = 3;
 
-        Maze matrix = MazeBuilder.createFromFile("small-maze.txt");
+        Maze matrix = MazeBuilder.createFromFile("src/test/resources/small-maze.txt");
 
         assertEquals(startX, matrix.getStartX());
         assertEquals(startY, matrix.getStartY());

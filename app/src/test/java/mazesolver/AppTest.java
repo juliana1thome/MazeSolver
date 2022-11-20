@@ -10,7 +10,7 @@ import java.io.IOException;
 
 class AppTest {
     @Test void useFile() throws IOException, InvalidMazeException {
-        Maze matrix = MazeBuilder.createFromFile("small-maze.txt");
+        Maze matrix = MazeBuilder.createFromFile("src/test/resources/small-maze.txt");
 
         MazeSolver mazeSolver = new MazeSolver(matrix.getMatrix(), matrix.getStartY(),matrix.getStartX(),matrix.getExitY(),matrix.getExitX());
 
@@ -23,7 +23,7 @@ class AppTest {
 
     @Test void useFile12Paths() throws IOException, InvalidMazeException {
 
-        Maze matrix = MazeBuilder.createFromFile("maze-12-paths.txt");
+        Maze matrix = MazeBuilder.createFromFile("src/test/resources/maze-12-paths.txt");
 
         MazeSolver mazeSolver = new MazeSolver(matrix.getMatrix(), matrix.getStartY(),matrix.getStartX(),matrix.getExitY(),matrix.getExitX());
 
@@ -35,7 +35,7 @@ class AppTest {
     }
 
     @Test void useOriginalFile() throws IOException, InvalidMazeException {
-        Maze matrix = MazeBuilder.createFromFile("maze.txt");
+        Maze matrix = MazeBuilder.createFromFile("src/test/resources/maze.txt");
 
         MazeSolver mazeSolver = new MazeSolver(matrix.getMatrix(), matrix.getStartY(),matrix.getStartX(),matrix.getExitY(),matrix.getExitX());
 
@@ -47,7 +47,7 @@ class AppTest {
     }
 
     @Test void mazeNoPaths() throws IOException, InvalidMazeException {
-        Maze matrix = MazeBuilder.createFromFile("maze-no-paths.txt");
+        Maze matrix = MazeBuilder.createFromFile("src/test/resources/maze-no-paths.txt");
 
         MazeSolver mazeSolver = new MazeSolver(matrix.getMatrix(), matrix.getStartY(),matrix.getStartX(),matrix.getExitY(),matrix.getExitX());
 

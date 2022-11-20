@@ -5,7 +5,7 @@ import java.io.IOException;
 public class App {
     public static void main(String[] args) throws IOException, InvalidMazeException {
                 
-        Maze matrix = MazeBuilder.createFromFile("app/src/main/java/mazesolver/maze.txt");
+        Maze matrix = MazeBuilder.createFromFile("app/src/main/resources/maze.txt");
         
         MazeSolver mazeSolver = new MazeSolver(matrix.getMatrix(), matrix.getStartY(),matrix.getStartX(),matrix.getExitY(),matrix.getExitX());
 
