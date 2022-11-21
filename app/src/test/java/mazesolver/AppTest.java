@@ -10,51 +10,51 @@ import java.io.IOException;
 
 class AppTest {
     @Test void useFile() throws IOException, InvalidMazeException {
-        Maze matrix = MazeBuilder.createFromFile("src/test/resources/small-maze.txt");
+        Maze maze = MazeBuilder.createFromFile("src/test/resources/small-maze.txt");
 
-        MazeSolver mazeSolver = new MazeSolver(matrix.getMatrix(), matrix.getStartY(),matrix.getStartX(),matrix.getExitY(),matrix.getExitX());
+        MazeSolver mazeSolver = new MazeSolver(maze.getMatrix(), maze.getStartY(),maze.getStartX(),maze.getExitY(),maze.getExitX());
 
         assertEquals(1, mazeSolver.findTotalPaths().size());
-        assertEquals(0, matrix.getStartX());
-        assertEquals(0, matrix.getStartY());
-        assertEquals(3, matrix.getExitX());
-        assertEquals( 3, matrix.getExitY());
+        assertEquals(0, maze.getStartX());
+        assertEquals(0, maze.getStartY());
+        assertEquals(3, maze.getExitX());
+        assertEquals( 3, maze.getExitY());
     }
 
     @Test void useFile12Paths() throws IOException, InvalidMazeException {
 
-        Maze matrix = MazeBuilder.createFromFile("src/test/resources/maze-12-paths.txt");
+        Maze maze = MazeBuilder.createFromFile("src/test/resources/maze-12-paths.txt");
 
-        MazeSolver mazeSolver = new MazeSolver(matrix.getMatrix(), matrix.getStartY(),matrix.getStartX(),matrix.getExitY(),matrix.getExitX());
+        MazeSolver mazeSolver = new MazeSolver(maze.getMatrix(), maze.getStartY(),maze.getStartX(),maze.getExitY(),maze.getExitX());
 
         assertEquals(1, mazeSolver.findTotalPaths().size());
-        assertEquals(2, matrix.getStartX());
-        assertEquals(1, matrix.getStartY());
-        assertEquals(3, matrix.getExitX());
-        assertEquals(2, matrix.getExitY());
+        assertEquals(2, maze.getStartX());
+        assertEquals(1, maze.getStartY());
+        assertEquals(3, maze.getExitX());
+        assertEquals(2, maze.getExitY());
     }
 
     @Test void useOriginalFile() throws IOException, InvalidMazeException {
-        Maze matrix = MazeBuilder.createFromFile("src/test/resources/maze.txt");
+        Maze maze = MazeBuilder.createFromFile("src/test/resources/maze.txt");
 
-        MazeSolver mazeSolver = new MazeSolver(matrix.getMatrix(), matrix.getStartY(),matrix.getStartX(),matrix.getExitY(),matrix.getExitX());
+        MazeSolver mazeSolver = new MazeSolver(maze.getMatrix(), maze.getStartY(),maze.getStartX(),maze.getExitY(),maze.getExitX());
 
         assertEquals(12, mazeSolver.findTotalPaths().size());
-        assertEquals(0, matrix.getStartX());
-        assertEquals(1, matrix.getStartY());
-        assertEquals(40, matrix.getExitX());
-        assertEquals(39, matrix.getExitY());
+        assertEquals(0, maze.getStartX());
+        assertEquals(1, maze.getStartY());
+        assertEquals(40, maze.getExitX());
+        assertEquals(39, maze.getExitY());
     }
 
     @Test void mazeNoPaths() throws IOException, InvalidMazeException {
-        Maze matrix = MazeBuilder.createFromFile("src/test/resources/maze-no-paths.txt");
+        Maze maze = MazeBuilder.createFromFile("src/test/resources/maze-no-paths.txt");
 
-        MazeSolver mazeSolver = new MazeSolver(matrix.getMatrix(), matrix.getStartY(),matrix.getStartX(),matrix.getExitY(),matrix.getExitX());
+        MazeSolver mazeSolver = new MazeSolver(maze.getMatrix(), maze.getStartY(),maze.getStartX(),maze.getExitY(),maze.getExitX());
 
         assertEquals(0, mazeSolver.getTotalPaths());
-        assertEquals(0, matrix.getStartX());
-        assertEquals(0, matrix.getStartY());
-        assertEquals(3, matrix.getExitX());
-        assertEquals(3, matrix.getExitY());
+        assertEquals(0, maze.getStartX());
+        assertEquals(0, maze.getStartY());
+        assertEquals(3, maze.getExitX());
+        assertEquals(3, maze.getExitY());
     }
 }

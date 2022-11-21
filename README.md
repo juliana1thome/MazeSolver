@@ -33,7 +33,7 @@ TESTS
 
 There are 4 test files in this application:
 
-* AppTest (Integration)
+* AppTest (Integration Test)
 * MazeBuilderTest (Unit Test)
 * MazePathTest (Unit Test)
 * MazeSolverTest (Unit Test)
